@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Say Hello</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg">
+    <br>
+    <form action="create_show_cards" method="post">
+        <h1>Create a flashcard! </h1>
+        <br>
+        <p>Enter front of the flashcard: </p>
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <p>Enter back of the flashcard: </p>
+        <br>
+        <input type="text" name="back_card">
+        <br>
+        <input type="submit" value="CREATE CARD" id="greet">
+        
+    </form>
+</body>
+</html>

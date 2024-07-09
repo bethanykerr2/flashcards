@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Say Hello</title>
+    <base href="/">
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<div class="topnav">
+    <a class="active" href="home">Home</a>
+    <a href="create">Create</a>
+    <a href="answer">Review</a>
+    <a href="login">Login</a>
+    <a href="signup">Signup</a>
+  </div>
+
+  
+<body>
+    <img src="https://t3.ftcdn.net/jpg/00/06/45/56/360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg">
+    <br>
+    <h1>Card successfully created: </h1>
+    <br>
+    <h3>List of cards: </h3>
+    <br>
+    <p id="msg"></p>
+
+    <form action="create" method="post">
+        <br>
+        <button type="submit">Create more Flashcards</button>
+    </form>
+
+    <script>
+    var card_data = localStorage.getItem('card-data');
+    
+    var cards = JSON.parse(card_data);
+
+
+    var txt = '';
+
+    for (i = 0; i < cards.length; i++) {
+        txt += cards[i]['front_card'] + ' = ' + cards[i]['back_card'] + '<br/>'+'\n';
+    }
+
+    console.log(txt);
+    document.getElementById('msg').innerHTML = txt;
+    
+        
+    </script>
+
+</body>
+</html>
